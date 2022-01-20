@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="js.js"></script>
+</head>
+<body>
+<form>
+    <table border="5">
+        <tr>
+            <td colspan="10" > <input class="td" type="text" id="edu"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Rad" ></td>
+            <td><input type="button" value="       " ></td>
+            <td><input type="button" value="  x!  " ></td>
+            <td><input type="button" value="   (   " ></td>
+            <td><input type="button" value="   )   " ></td>
+            <td><input type="button" value="  %  " ></td>
+            <td><input type="button" value=" AC " onclick=" clr() "/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value=" Inv " ></td>
+            <td><input type="button" value=" Sin " ></td>
+            <td><input type="button" value="  In  " ></td>
+            <td> <input type="button" value="   7  " onclick="dis ('7')"/></td>
+            <td> <input type="button" value="   8  " onclick="dis ('8')"/></td>
+            <td> <input type="button" value="   9  " onclick="dis ('9')"/></td>
+            <td> <input type="button" value="   /   " onclick="dis ('/')"/></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="  Pi  " ></td>
+            <td><input type="button" value=" cos " ></td>
+            <td><input type="button" value=" log " ></td>
+            <td> <input type="button" value="   4  "onclick="dis ('4')"/></td>
+            <td> <input type="button" value="   5  "onclick="dis ('5')"/></td>
+            <td> <input type="button" value="   6  "onclick="dis ('6')"/></td>
+            <td> <input type="button" value="   *  " onclick="dis ('*')"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="   e  " ></td>
+            <td><input type="button" value=" tan  " ></td>
+            <td><input type="button" value="   ?   " ></td>
+            <td> <input type="button" value="   1  " onclick="dis ('1')"/></td>
+            <td> <input type="button" value="   2   "onclick="dis ('2')"/></td>
+            <td> <input type="button" value="   3  "onclick="dis ('3')"/></td>
+            <td> <input type="button" value="   -   " onclick="dis ('-')"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" value=" Ans " ></td>
+            <td><input type="button" value=" EXP "></td>
+            <td><input type="button" value=" x^y " ></td>
+            <td> <input type="button" value="   0  " onclick="dis ('0')"/></td>
+            <td> <input type="button" value="   .   "onclick="dis ('.')"/></td>
+            <td> <input type="button" value="   =  " onclick="solve()"/></td>
+            <td> <input type="button" value="   +  " onclick="dis ('+')"/></td>
+        </tr>
+    </table>
+    <script>
+        function dis(val)
+        {
+            document.getElementById("edu").value+= val;
+        }
+        function solve () {
+            let x = document.getElementById("edu").value;
+            let y = eval(x);
+            document.getElementById("edu").value = y ;
+        }
+        function clr()
+        {
+            document.getElementById("edu").value = "";
+        }
+    </script>
+</form>
+</body>
+</html>
